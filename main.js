@@ -8,11 +8,14 @@ $(document).ready(function() {
     const count = parseInt(urlParams.get('count'))
     const length_type = urlParams.get('length_type')
 
+    // set input to equal html params
+    $(`#length_type option[value='${length_type}']`).prop('selected', true);
+    $('#count').val(count)
+
     if (!count) {
         $('#output').html(dummy_txt)
     }
     else {
-        console.log('hi')
         var output_a = new Array()
         var output_txt = ""
 
@@ -36,7 +39,7 @@ $(document).ready(function() {
         output_a.push(...dummy_a.splice(0, remainder))
 
         output_txt = output_a.join(del)
-
+        output_txt = output_txt.replaceAll('..', '.')
 
         $('#output').html(output_txt)
     }
