@@ -21,14 +21,14 @@ $(document).ready(function() {
     const count = parseInt(urlParams.get('count'))
     const length_type = urlParams.get('length_type')
 
-    // set input to equal html params
-    $(`#length_type option[value='${length_type}']`).prop('selected', true);
-    $('#count').val(count)
-
     if (!count) {
         $('#output').html(dummy_txt)
     }
     else {
+        // set input to equal html params
+        $(`#length_type option[value='${length_type}']`).prop('selected', true);
+        $('#count').val(count)
+        
         var output_a = new Array()
         var output_txt = ""
 
