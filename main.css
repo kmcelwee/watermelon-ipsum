@@ -1,0 +1,16 @@
+#container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: black;
+    padding: 20px;
+    color: white;
+}
+
+form {
+    padding: 5px;
+}
+
+body {
+    background-image: url('img/watermelon-sugar.jpg');
+    background-repeat: repeat-y repeat-x;
+}
