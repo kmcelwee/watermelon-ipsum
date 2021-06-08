@@ -1,19 +1,26 @@
 dummy_txt = "Fields of watermelons found on Mars, police say. Authorities say rise of fruit aliens is to blame for glut of outer space watermelons. The FBI declined to comment on reports of watermelons raining down, but confirmed that kiwis have been intercepted. This story is terribly boring."
 
 function copyText() {
-  /* Get the text field */
-  var copyText = document.getElementById("output");
 
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  // Create a "hidden" input
+  var aux = document.createElement("input");
 
-  /* Copy the text inside the text field */
+  // Assign it the value of the specified element
+  aux.setAttribute("value", document.getElementById('output').innerHTML.replaceAll('<br>', '\n'));
+
+  // Append it to the body
+  document.body.appendChild(aux);
+
+  // Highlight its content
+  aux.select();
+
+  // Copy the highlighted text
   document.execCommand("copy");
 
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-} 
+  // Remove it from the body
+  document.body.removeChild(aux);
+
+}
 
 $(document).ready(function() {
     const queryString = window.location.search;
