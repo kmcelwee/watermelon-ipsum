@@ -15,9 +15,9 @@
 <body>
 <div id="container">
     <form>
-        <div>Generate dummy text:</div>
+        <h2>Generate dummy text</h2>
         <label for="count" ></label>
-        <input type="number" id="count" name="count" value="1" min="0" required>
+        <input type="number" size="1" id="count" name="count" value="1" min="0" required>
 
         <label for="length_type"></label>
         <select name="length_type" id="length_type" value="paragraphs">
@@ -25,11 +25,13 @@
             <option value="sentences">Sentences</option>
             <option value="words">Words</option>
         </select>
-        <input id="submit" type="submit" value="submit">
+        <input id="submit" type="submit" value="Generate">
+        
     </form>
+<!-- <button style="margin: 10px" onclick="copyText()">Copy Text</button> -->
+    
 
-    <div>
-        <h2>Output</h2>
+    <div id="output_container">
         <div id="output"></div>
     </div>
 </div>

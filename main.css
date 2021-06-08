@@ -10,7 +10,12 @@ form {
     padding: 5px;
 }
 
+#output_container {
+    padding: 10px;
+}
+
 body {
     background-image: url('img/watermelon-sugar.jpg');
+    background-size: 100px;
     background-repeat: repeat-y repeat-x;
 }
